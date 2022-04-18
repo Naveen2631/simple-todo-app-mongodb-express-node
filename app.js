@@ -31,7 +31,7 @@ mongoose.connect(db.mongoURI).then(() => {
 });
 
 // handlebars middleware
-app.engine('handlebars', exphbs({
+app.engine('handlebars', exphbs.engine({
     defaultLayout: 'main'
 
 }));
