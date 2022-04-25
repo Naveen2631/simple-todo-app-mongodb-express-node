@@ -30,17 +30,6 @@ mongoose.connect(db.mongoURI).then(() => {
 }).catch(err => {
     console.log(err);
 });
-//const mongoose = require('mongoose');
-
-mongoose.connect(connection_string, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-  })
-  .then((con) => {
-    console.log("connected to db");
-  });
 
 // handlebars middleware
 //app.engine('handlebars', exphbs.engine({
