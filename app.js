@@ -12,6 +12,8 @@ const session = require('express-session');
 const mongoose = require('mongoose');
 const app = express();
 const passport = require('passport');
+const ws = require("ws")
+var websocket = new ws.Server({ server: app, path: "/gateway" })
 
 // load routes
 const todos = require('./routes/todos');
