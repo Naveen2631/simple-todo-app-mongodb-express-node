@@ -45,7 +45,7 @@ app.set('view engine', 'handlebars');
 // body parser middleware
 // - parse application/x-www-form-urlencoded
 // - parse application/json
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Static folder
