@@ -12,6 +12,7 @@ const session = require('express-session');
 const mongoose = require('mongoose');
 const app = express();
 const passport = require('passport');
+const handlebars = exphbs.create({ extname: '.hbs',});
 
 // load routes
 const todos = require('./routes/todos');
@@ -31,8 +32,10 @@ mongoose.connect(db.mongoURI).then(() => {
 });
 
 // handlebars middleware
-app.engine('handlebars', exphbs.engine({
-    defaultLayout: 'main'
+//app.engine('handlebars', exphbs.engine({
+  //  defaultLayout: 'main'
+ app.engine('.hbs', handlebars.engine);
+app.set('view engine', '.hbs');
 
 }));
 app.set('view engine', 'handlebars');
