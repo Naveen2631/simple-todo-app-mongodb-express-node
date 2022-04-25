@@ -30,6 +30,9 @@ mongoose.connect(db.mongoURI).then(() => {
 }).catch(err => {
     console.log(err);
 });
+{ 
+    useNewUrlParser: true 
+}
 
 // handlebars middleware
 //app.engine('handlebars', exphbs.engine({
