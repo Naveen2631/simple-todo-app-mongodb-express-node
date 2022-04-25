@@ -34,10 +34,12 @@ mongoose.connect(db.mongoURI).then(() => {
 // handlebars middleware
 //app.engine('handlebars', exphbs.engine({
   //  defaultLayout: 'main'
- app.engine('.hbs', handlebars.engine);
+//}));
+
+app.engine('.hbs', handlebars.engine);
 app.set('view engine', '.hbs');
 
-}));
+
 app.set('view engine', 'handlebars');
 
 // body parser middleware
