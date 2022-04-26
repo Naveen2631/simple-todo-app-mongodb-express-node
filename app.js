@@ -39,6 +39,9 @@ mongoose.connect(db.mongoURI).then(() => {
 app.engine('.hbs', handlebars.engine);
 app.set('view engine', '.hbs');
 
+var express = require('express');
+var expressHbs = require('express-handlebars');
+
 
 app.set('view engine', 'handlebars');
 
