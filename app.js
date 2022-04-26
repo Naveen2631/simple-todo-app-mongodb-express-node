@@ -31,13 +31,14 @@ mongoose.connect(db.mongoURI).then(() => {
     console.log(err);
 });
 
-// handlebars middleware
-//app.engine('handlebars', exphbs.engine({
-  //  defaultLayout: 'main'
-//}));
+handlebars middleware
+app.engine('handlebars', exphbs.engine({
+defaultLayout: 'main'
+    extname: '.hbs'
+}));
 
-app.engine('.hbs', handlebars.engine);
-app.set('view engine', '.hbs');
+//app.engine('.hbs', handlebars.engine);
+//app.set('view engine', '.hbs');
 
 
 app.set('view engine', 'handlebars');
