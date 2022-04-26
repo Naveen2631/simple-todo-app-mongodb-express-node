@@ -31,7 +31,7 @@ mongoose.connect(db.mongoURI).then(() => {
     console.log(err);
 });
 
-handlebars middleware
+//handlebars middleware
 app.engine('handlebars', exphbs.engine({
 defaultLayout: 'main'
     extname: '.hbs'
