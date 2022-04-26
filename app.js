@@ -35,7 +35,7 @@ mongoose.connect(db.mongoURI).then(() => {
 //app.engine('handlebars', exphbs.engine({
 //defaultLayout: 'main'
   //  extname: '.hbs'
-}));
+//}));
 
 app.engine('.hbs', handlebars.engine);
 app.set('view engine', '.hbs');
